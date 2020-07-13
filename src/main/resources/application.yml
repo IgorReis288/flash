@@ -1,0 +1,25 @@
+
+spring:
+  profiles:
+    active: local
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: '${DATA_URL}'
+    username: '${DATA_USERNAME}'
+    password: '${DATA_PASSWORD}'
+  jpa:
+    show-sql: true
+    open-in-view: true
+    database-platform: "org.hibernate.dialect.PostgreSQL9Dialect"
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: 'false'
+    hibernate:
+      ddl-auto: create-drop
+
+
+
+
+
